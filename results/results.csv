@@ -1,0 +1,4 @@
+,word count,reading time (min),ARI,SMOG,Flesch Kincaid Reading Ease,Flesch Kincaid Reading Age
+Raw,6955,27.82,20.88,19.84,33.47,18.85
+LSA,2838,11.35,23.03,21.17,33.47,20.86
+LexRank,2834,11.34,22.26,20.5,33.47,19.78
