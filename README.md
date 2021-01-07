@@ -2,14 +2,25 @@
 
 ## Motivation 
 
-Climate change reporting suffers from a number of communication disadvantages. Specifically, the process of reading climate change reports suffers from a high level of complexity and jargon. 
+Climate change action can suffer from a number of communication issue when it comes to governmental bodies disseminating information to the general public. Specifically, the process of reading official climate change reports can be hampered from the material's high level of complexity and use of jargon. 
 
-This project aims to make the IPCC summary more readable with the following objectives (one or more can be accomplished):
+This natural language processing project aims to make the IPCC summary (https://www.ipcc.ch/sr15/chapter/spm/) more readable by completing one or more of the following objectives:
 
-- Reduce the average reading difficulty (Flesch Kincaid or other)
-- Reduce the length of the report via text summarization (Spacy NLP packages)
-- Reduce the reading time using standard word calculations (ex: assuming a reading pace of 250 words per minute, new reading time is ... )
+- Reduce the average reading difficulty (using the reading metrics such as Flesch Kincaid or other)
+- Reduce the length of the report via text summarization (using NLP packages such as Spacy, Sumy, or NLTK)
+- assess the reading time using standard word calculations (ex: assuming a reading pace of 250 words per minute, new reading time is ... )
 
+
+## Methodology
+For demonstration purposes, the text analysis will be carried out on the 'SPECIAL REPORT: GLOBAL WARMING OF 1.5 ºC' report prepared by the Intergovernmental Panel for Climate Change (IPCC). For demonstration purposes, this project will only use the text from the 'Summary for Policymakers' section, though the analysis could theoretically work for any/all parts of the IPCC report. Text was scraped from the IPCC website using BeautifulSoup and supplementary information (images, footnotes) were ignored for this analysis.
+
+Text summarization was completed using the [Sumy](https://github.com/miso-belica/sumy) python package. two summarization algorithms were used: Lexrank and Latent Semantic Analysis (LSA). Resulting summaries from each algorithm will be compared to the raw text in terms of reading difficulty and word length. Additionally, several reading difficulty metrics will be used: 
+- [Automated Reading Index / ARI](https://readabilityformulas.com/automated-readability-index.php)
+- [SMOG](https://readabilityformulas.com/smog-readability-formula.php)
+
+Baseline assumptions:
+- average reading time is 250 word per minute
+- Baseline reading level for the average american is [7th grade](https://centerforplainlanguage.org/what-is-readability/#:~:text=The%20average%20American%20is%20considered,guidelines%20in%20the%20medical%20industry)
 
 ## Results
 
@@ -46,3 +57,13 @@ Human activities are estimated to have caused approximately 1.0°C of global war
 ## TO DO:
 - Containerize / add requirements.txt
 - Discussion of results
+
+## REFERENCES:
+
+Reading difficulty: 
+- 
+
+Sumy/Text summarization
+- https://github.com/miso-belica/sumy 
+- https://jcharistech.wordpress.com/2019/01/05/how-to-summarize-text-or-document-with-sumy/
+- https://medium.com/@ondenyi.eric/extractive-text-summarization-techniques-with-sumy-3d3b127a0a32
