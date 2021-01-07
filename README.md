@@ -20,7 +20,7 @@ Resulting summaries from each algorithm will be compared to the raw text in term
 - [Automated Reading Index / ARI](https://readabilityformulas.com/automated-readability-index.php)
 - [SMOG](https://readabilityformulas.com/smog-readability-formula.php)
 - [Flesch Kincaid Reading Ease](https://readable.com/blog/the-flesch-reading-ease-and-flesch-kincaid-grade-level/)
--[Flesch Kincaid Grade Level](https://readable.com/blog/the-flesch-reading-ease-and-flesch-kincaid-grade-level/)
+- [Flesch Kincaid Grade Level](https://readable.com/blog/the-flesch-reading-ease-and-flesch-kincaid-grade-level/)
 
 Assumptions:
 - Average reading time is 250 word per minute
