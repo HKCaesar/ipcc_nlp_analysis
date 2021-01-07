@@ -12,15 +12,19 @@ This natural language processing project aims to make the IPCC summary (https://
 
 
 ## Methodology
-For demonstration purposes, the text analysis will be carried out on the 'SPECIAL REPORT: GLOBAL WARMING OF 1.5 ºC' report prepared by the Intergovernmental Panel for Climate Change (IPCC). For demonstration purposes, this project will only use the text from the 'Summary for Policymakers' section, though the analysis could theoretically work for any/all parts of the IPCC report. Text was scraped from the IPCC website using BeautifulSoup and supplementary information (images, footnotes) were ignored for this analysis.
+The text analysis will be carried out on the 'SPECIAL REPORT: GLOBAL WARMING OF 1.5 ºC' report prepared by the Intergovernmental Panel for Climate Change (IPCC). For demonstration purposes, this project will only use the text from the 'Summary for Policymakers' section, though the analysis could theoretically work for any/all parts of the IPCC report. Text was scraped from the IPCC website using BeautifulSoup and supplementary information (images, footnotes) were ignored for this analysis.
 
-Text summarization was completed using the [Sumy](https://github.com/miso-belica/sumy) python package. two summarization algorithms were used: Lexrank and Latent Semantic Analysis (LSA). Resulting summaries from each algorithm will be compared to the raw text in terms of reading difficulty and word length. Additionally, several reading difficulty metrics will be used: 
+Text summarization was completed using the [Sumy](https://github.com/miso-belica/sumy) python package. two summarization algorithms were used: Lexrank and Latent Semantic Analysis (LSA). 
+
+Resulting summaries from each algorithm will be compared to the raw text in terms of reading difficulty and word length. In addition to reading time and word count, several reading difficulty metrics will be used: 
 - [Automated Reading Index / ARI](https://readabilityformulas.com/automated-readability-index.php)
 - [SMOG](https://readabilityformulas.com/smog-readability-formula.php)
+- [Flesch Kincaid Reading Ease](https://readable.com/blog/the-flesch-reading-ease-and-flesch-kincaid-grade-level/)
+-[Flesch Kincaid Grade Level](https://readable.com/blog/the-flesch-reading-ease-and-flesch-kincaid-grade-level/)
 
-Baseline assumptions:
-- average reading time is 250 word per minute
-- Baseline reading level for the average american is [7th grade](https://centerforplainlanguage.org/what-is-readability/#:~:text=The%20average%20American%20is%20considered,guidelines%20in%20the%20medical%20industry)
+Assumptions:
+- Average reading time is 250 word per minute
+- Baseline reading level (for comparison) for the average american is [7th grade](https://centerforplainlanguage.org/what-is-readability/#:~:text=The%20average%20American%20is%20considered,guidelines%20in%20the%20medical%20industry)
 
 ## Results
 
@@ -60,10 +64,6 @@ Human activities are estimated to have caused approximately 1.0°C of global war
 
 ## REFERENCES:
 
-Reading difficulty: 
-- 
-
-Sumy/Text summarization
 - https://github.com/miso-belica/sumy 
 - https://jcharistech.wordpress.com/2019/01/05/how-to-summarize-text-or-document-with-sumy/
 - https://medium.com/@ondenyi.eric/extractive-text-summarization-techniques-with-sumy-3d3b127a0a32
